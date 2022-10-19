@@ -1,0 +1,17 @@
+# node_modules
+node_modules
+
+# build
+build
+
+# environment variables
+.env
+
+# token whatsapp
+tokens
+
+# ignore upload files
+src/uploads/images/*
+
+# ignore files log
+*.log

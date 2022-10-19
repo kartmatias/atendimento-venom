@@ -1,0 +1,34 @@
+{
+  "name": "atendimento-venom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "babel-node -r dotenv/config ./src/server.js",
+    "dev": "nodemon -r dotenv/config -w src --exec \"babel-node src/server.js\"",
+    "migrate": "knex migrate:latest"
+  },
+ "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^2.3.0",
+    "mime-types": "^2.1.35",
+    "mysql": "^2.18.1",
+    "request": "^2.88.2",
+    "socket.io": "^4.5.3",
+    "venom-bot": "^4.3.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.19.3",
+    "@babel/node": "^7.19.1",
+    "@babel/preset-env": "^7.19.4",
+    "babel-plugin-root-import": "^6.6.0",
+    "nodemon": "^2.0.20"
+  }
+}

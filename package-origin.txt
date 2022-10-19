@@ -1,0 +1,56 @@
+{
+  "name": "atendimento-backend",
+  "version": "1.0.0",
+  "description": "Backend do sistema de atendimento da codework.",
+  "main": "index.js",
+  "repository": "https://github.com/codework-Telecom/atendimento-backend",
+  "author": "Glederson Domingues",
+  "license": "MIT",
+  "scripts": {
+    "start": "babel-node -r dotenv/config ./src/server.js",
+    "dev": "nodemon -r dotenv/config -w src --exec \"babel-node src/server.js\""
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babel-plugin-root-import": "^6.6.0",
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.21.15",
+    "mime-types": "^2.1.28",
+    "mysql": "^2.18.1",
+    "request": "^2.88.2",
+    "socket.io": "^3.0.5",
+    "venom-bot": "^2.2.3"
+  }
+}
+
+
+if necessary use 
+
+.babelrc
+
+{
+    "presets": [
+        ["@babel/preset-env", {
+            "targets": {
+                "node": "current"
+            }
+        }]
+    ],
+    "plugins": [
+        "@babel/proposal-class-properties",
+        ["babel-plugin-root-import", {
+                "rootPathSuffix": "./src",
+                "rootPathPrefix": "~/"
+            }
+        ]
+    ]
+}
